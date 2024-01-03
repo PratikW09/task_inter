@@ -8,13 +8,9 @@ const cors = require('cors');
 const { verifyTokenMiddleware } = require('./utils/token');
 
 const app = express();
-const corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials: true
 
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(cookieParser());
 
 const PORT = process.env.PORT || 4000;
